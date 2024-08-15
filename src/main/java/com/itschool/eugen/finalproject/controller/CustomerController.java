@@ -35,7 +35,7 @@ public class CustomerController {
     }
 
     @Operation(summary = "Delete a customer")
-@DeleteMapping("/customers/{id}")
+    @DeleteMapping("/customers/{id}")
     public boolean deleteCustomer(@PathVariable Long id) {
         return customerService.deleteCustomer(id);
     }

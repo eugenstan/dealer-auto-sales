@@ -10,7 +10,7 @@ public interface OrderService {
 
    List<OrderDTO> findAllOrders(Long customerId);
 
-    OrderDTO placeOrder(Long customerId, OrderDTO orderDTO);
+   OrderDTO placeOrder(Long customerId, OrderDTO orderDTO);
 
-    List<OrderDTO> findOrdersByDescription(String description);
+   List<OrderDTO> findOrdersByDescription(String description);
 }

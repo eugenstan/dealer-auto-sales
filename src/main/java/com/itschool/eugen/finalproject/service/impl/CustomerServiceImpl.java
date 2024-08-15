@@ -86,11 +86,6 @@ public class CustomerServiceImpl implements CustomerService {
         }
 
         private CustomerDTO convertToCustomerDTO(Customer customer) {
-            // get the Address entity from the User entity
-            //Address address = user.getAddress();
-
-            // convert the Address entity to an AddressDTO
-           // AddressDTO addressDTO = new AddressDTO(address.getCity(), address.getStreet(), address.getNumber(), address.getZipCode());
 
             List<OrderDTO> orderDTOS = customer.getOrders()
                     .stream()
