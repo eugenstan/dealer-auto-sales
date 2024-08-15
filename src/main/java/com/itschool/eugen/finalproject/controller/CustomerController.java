@@ -3,8 +3,10 @@ package com.itschool.eugen.finalproject.controller;
 import com.itschool.eugen.finalproject.model.CustomerDTO;
 import com.itschool.eugen.finalproject.service.CustomerService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
+@Tag(name = "Customer Manager", description = "Customer Manager API that manipulates operations related to orders") // Swagger annotation to group the API endpoints under the "Customer Manager" tag
 @RestController
 public class CustomerController {
 
