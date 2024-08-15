@@ -20,13 +20,13 @@ public class OrderController {
     }
 
 
-    @Operation(summary = "Place an order", description = "Place an order for a specific user and return the created order")
+    @Operation(summary = "Place an order", description = "Place an order for a specific customer and return the created order")
     @PostMapping("{customerId}")
     public OrderDTO placeOrder(@PathVariable Long customerId, OrderDTO orderDTO) {
         return orderService.placeOrder(customerId, orderDTO);
     }
 
-    @Operation(summary = "Find all orders for a user", description = "Find all orders for a specific user and return a list of orders")
+    @Operation(summary = "Find all orders for a customer", description = "Find all orders for a specific customer and return a list of orders")
     @GetMapping("{customerId}")
     public List<OrderDTO> getAllOrders(@PathVariable Long customerId) {
         return orderService.findAllOrders(customerId);
