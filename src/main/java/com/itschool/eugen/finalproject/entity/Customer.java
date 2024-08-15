@@ -17,10 +17,6 @@ public class Customer {
     private String phoneNumber;
     private String city;
 
-   /* @OneToOne(cascade = CascadeType.ALL) // CascadeType.ALL will propagate all operations (CRUD) to the related entity
-    @JoinColumn(name = "address_uuid", referencedColumnName = "uuid") // name will be the column name in the 'users' table, referencedColumnName is the column name in the 'addresses' table
-    private Address address; */
-
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY) // mappedBy is used to specify the field in the Order class that owns the relationship and fetch is used to specify how the orders should be fetched (LAZY will fetch the orders only when they are accessed)
     private List<Order> orders;
 
