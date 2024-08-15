@@ -32,6 +32,7 @@ public class OrderController {
         return orderService.findAllOrders(customerId);
     }
 
+    @Operation(summary = "Find a order by a description", description = "Find a order by a description and return that order")
     @GetMapping("description/{description}")
     public List<OrderDTO> getOrdersByDescription(@PathVariable String description) {
         return orderService.findOrdersByDescription(description);
